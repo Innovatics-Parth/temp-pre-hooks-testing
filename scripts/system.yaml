@@ -1,0 +1,4 @@
+# config.yml
+bad:
+  indent:   true
+  missing_space:here
