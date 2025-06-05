@@ -1,47 +1,41 @@
--   id: trailing-whitespace
-    name: Remove trailing whitespace
-    entry: trailing-whitespace-fixer
-    language: python
-    types: [python]
-
--   id: end-of-file-fixer
-    name: Ensure newline at end of file
-    entry: end-of-file-fixer
-    language: python
-    types: [python]
-
--   id: check-yaml
-    name: Check YAML
-    entry: check-yaml
-    language: python
-    types: [yaml]
-
--   id: debug-statements
-    name: Debug statement checker
-    entry: debug-statements
-    language: python
-    types: [python]
-
--   id: double-quote-string-fixer
-    name: Convert single quotes to double quotes
-    entry: double-quote-string-fixer
-    language: python
-    types: [python]
-
--   id: name-tests-test
-    name: Ensure tests are named test_*
-    entry: name-tests-test
-    language: python
-    types: [python]
-
--   id: requirements-txt-fixer
-    name: Fix sorting in requirements.txt
-    entry: requirements-txt-fixer
-    language: python
-    types: [text]
-
--   id: autopep8
-    name: autopep8 fixer
-    entry: autopep8
-    language: python
-    types: [python]
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: double-quote-string-fixer
+    -   id: name-tests-test
+    -   id: requirements-txt-fixer
+-   repo: https://github.com/asottile/setup-cfg-fmt
+    rev: v2.8.0
+    hooks:
+    -   id: setup-cfg-fmt
+-   repo: https://github.com/asottile/reorder-python-imports
+    rev: v3.15.0
+    hooks:
+    -   id: reorder-python-imports
+        args: [--py39-plus, --add-import, 'from __future__ import annotations']
+-   repo: https://github.com/asottile/add-trailing-comma
+    rev: v3.2.0
+    hooks:
+    -   id: add-trailing-comma
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v3.20.0
+    hooks:
+    -   id: pyupgrade
+        args: [--py39-plus]
+-   repo: https://github.com/hhatto/autopep8
+    rev: v2.3.2
+    hooks:
+    -   id: autopep8
+-   repo: https://github.com/PyCQA/flake8
+    rev: 7.2.0
+    hooks:
+    -   id: flake8
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.16.0
+    hooks:
+    -   id: mypy
