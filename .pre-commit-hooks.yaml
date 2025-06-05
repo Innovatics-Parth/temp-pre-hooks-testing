@@ -1,0 +1,47 @@
+-   id: trailing-whitespace
+    name: Remove trailing whitespace
+    entry: trailing-whitespace-fixer
+    language: python
+    types: [python]
+
+-   id: end-of-file-fixer
+    name: Ensure newline at end of file
+    entry: end-of-file-fixer
+    language: python
+    types: [python]
+
+-   id: check-yaml
+    name: Check YAML
+    entry: check-yaml
+    language: python
+    types: [yaml]
+
+-   id: debug-statements
+    name: Debug statement checker
+    entry: debug-statements
+    language: python
+    types: [python]
+
+-   id: double-quote-string-fixer
+    name: Convert single quotes to double quotes
+    entry: double-quote-string-fixer
+    language: python
+    types: [python]
+
+-   id: name-tests-test
+    name: Ensure tests are named test_*
+    entry: name-tests-test
+    language: python
+    types: [python]
+
+-   id: requirements-txt-fixer
+    name: Fix sorting in requirements.txt
+    entry: requirements-txt-fixer
+    language: python
+    types: [text]
+
+-   id: autopep8
+    name: autopep8 fixer
+    entry: autopep8
+    language: python
+    types: [python]

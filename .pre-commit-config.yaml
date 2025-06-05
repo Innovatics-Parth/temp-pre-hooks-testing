@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/Innovatics-Parth/temp-pre-hooks-testing.git
-    rev: local
+    rev: main
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
